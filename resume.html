@@ -1,0 +1,352 @@
+%-------------------------
+% Resume in Latex
+% Author : Arkadeep Das, Manas Daruka, Ayush Sharma, Abhinav Gupta
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}: \hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{KARTAVYA PANTHI} % Your Name
+\newcommand{\course}{M.Sc - Mathematics and Computing} % Your Course
+\newcommand{\roll}{212123025} % Your Roll No.
+\newcommand{\phone}{6261808914} % Your Phone Number
+\newcommand{\emaila}{kartvayapanthi62@gmail.com} %Email 1
+\newcommand{\emailb}{kartavya.panthi@iitg.ac.in} %Email 2
+\newcommand{\github}{Kartv07} %Github
+\newcommand{\website}{} %Website
+\newcommand{\linkedin}{kartavya-panthi/} %linkedin
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+
+\includegraphics[width=2cm,clip]{iitg_logo.jpg}
+
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & \faIcon{mobile-alt}+91-\phone\\
+  {Roll No.:\roll} & \faIcon[regular]{envelope}\href{ mailto:\emaila}{ \emaila} \\
+  \course &  \faIcon[regular]{envelope}\href{mailto:\emailb}{ \emailb}\\
+  {Indian Institute Of Technology, Guwahati} &  \href{https://github.com/\github}{\faIcon{github} Github} $|$ \href{https://www.linkedin.com/in/\linkedin/}{\faIcon{linkedin} Linkedin} \\
+  
+\end{tabularx}
+}
+
+
+
+%-----------EDUCATION-----------------
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Indian Institute of Technology Guwahati}{Guwahati, India}
+%       {Bachelor of Technology in Mathematics and Computing ;  GPA: 8.10}{July. 2015 -- July. 2019 (Expected)}
+%     \resumeSubheading
+%       {Burdwan Model School}{Burdwan, W.B}
+%       {Central Board of Secondary Education (Class XII);  Percentage: 96.60}{March. 2015}
+%   \resumeSubHeadingListEnd\vspace{-3mm}
+\section{\textbf{Education}}
+\setlength{\tabcolsep}{5pt} % Default value: 6pt
+% \renewcommand{\arraystretch}{1.1} % Default value: 1
+\small{\begin{tabularx}
+{\dimexpr\textwidth-4mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree/Certificate } & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+  \hline
+  M.Sc Mathematics \& Computing & Indian Institute of Technology, Guwahati & 7.02 & 2021-2023\\
+  \hline
+  B.Sc Mathematics Hons. & IEHE, Barkatullah University, Bhopal & 86.11\% & 2018-2021\\ %Optional
+  \hline
+  Higher Secondary & MP Board & 87\% & 2018 \\
+  \hline
+  Secondary & MP Board & 83.66\% & 2016 \\
+  \hline
+\end{tabularx}}
+\vspace{-2mm}
+
+%-----------EXPERIENCE-----------------
+% \section{Experience}
+%   \resumeSubHeadingListStart
+
+%     \resumeSubheading
+%       {XYZ Company Name}{Location}
+%       {XXXXXXXXXXX \& YYYYYYYYYYYY Intern}{May 2019 - Jul. 2019}
+%       \resumeItemListStart
+%     \item {Work Done List 1}
+%     \item {Work Done List 2}
+%     % \item {More work done } .....
+%     \resumeItemListEnd
+    
+%     % \resumeSubheading
+%     %   {Company A}{Bengaluru, India}
+%     %   {API Developer \& Machine Learning Intern}{May. 2018 - Jul. 2018}
+%     %   \resumeItemListStart
+%     % \item {XXXXXXXXXXXXXXX}
+%     %     \item {YYYYYYYYYYYYYYYYYY}
+%     % \resumeItemListEnd
+      
+%   \resumeSubHeadingListEnd
+% \vspace{-5.5mm}
+% %-----------PROJECTS-----------------
+\vspace{1.0mm}
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+    
+    \resumeProject
+      {A Blockchain-based wallet for Bitcoins} 
+      {Personal project}
+      {}
+      {\href{https://defin-eth.vercel.app/}{\color{blue}Deployed Link} $|$ \href{https://github.com/Kartv07/DeFin-Ethereum}{\color{blue}GitHub}}
+      \resumeItemListStart
+    
+        \item{It's a responsive and dynamic website. It allows users to send \textbf{transactions of Ethereum/Bitcoin through blockchain.}}
+        % \vspace{0.1cm}
+        \item{ DeFin is a decentralized application built on Ethereum that allows
+users to extract all transaction information using the transaction hash.}
+        \item{ It provides higher reliability, improves security, metamask pairing, and increases the transparency of transactions.  }
+        \item{The Tech Stack contains \textbf{ReactJS, Tailwind CSS, Solidity, Meta-mask and JavaScript.}}
+    
+    \resumeItemListEnd
+    \vspace{-0.1mm}
+    \resumeProject
+      {Google Meet Clone (Team size : 03)}
+      {Summer Project by Coding-Club IIT Guwahati }{Jun. 2022 - Jul. 2022}{ \href{https://github.com/akashsahu123/google_meet_clone}{\color{blue}GitHub}}
+      \resumeItemListStart
+    \item {Google meet clone is a video conferencing platform, it provides high-quality video meetings and calls.}
+    \item{ The tech contains\textbf{ HTML, CSS, JavaScript.}}
+    \resumeItemListEnd
+    \vspace{-0.1mm}
+    \resumeProject
+      {DBMS Project on Buying and Selling (Team size : 02)}
+      {Prof Dr. Ashok Singh Sairam, IIT Guwahati }{Sep 2022 - Dec 2022}{\href{https://github.com/Kartv07/Buy_sell}{\color{blue}GitHub}}
+      \resumeItemListStart
+    \vspace{0.5mm}\item {\textbf{Vendquire }: An online market platform for \textbf{buying and selling the new \& pre-owned items} for IITG Campus.}\item{ Here people can effortlessly buy and sell their items. The main objective of this platform is to establish a connection between the owner and the customer with full of security and reliability which makes buying and selling easy.}\item{ The tech stack contains \textbf{HTML, CSS, PHP, MySQL.}}
+    \resumeItemListEnd
+    
+  
+
+     
+ 
+   
+      
+  \resumeSubHeadingListEnd
+\vspace{-7.0mm}
+
+\section{\textbf{Technical Skills}}
+\vspace{0.5mm}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming} % Category
+    {C, C++, Java, MATLAB*, Object Oriented Programming (OOPS)}
+    \vspace{0.4mm}
+    \resumeSubItem{Operating System}{Windows, Linux*}
+    \vspace{0.4mm}
+ \resumeSubItem{Web Technologies} % Category
+    {HTML, CSS, JavaScript, ES6, React*, Angular*, NodeJS*, ExpressJS*} % Skills
+    \vspace{0.4mm}
+ \resumeSubItem{Database Management} % Category
+    {MySQL, MongoDB}
+   
+%  \resumeSubItem{Operating Systems}
+%  {Windows, Linux*} 
+\hfill \textit{\footnotesize{\vspace{-0.2mm}* Elementary proficiency}} \hspace{3mm}
+ \resumeHeadingSkillEnd
+ \vspace{-5.4mm}
+
+
+\section{\textbf{Key courses taken}}
+\vspace{0.3mm}
+\resumeHeadingSkillStart
+\resumeSubItem{Computer Science}
+ {Computer Programming (with Lab), Data Structures \& Algorithm (with Lab), Advanced Data Structure \& Algorithm (with Lab), Theory of Computation, Database Management Systems (DBMS), Operating System (OS)}
+ \vspace{0.7mm}
+ \resumeSubItem{Mathematics} % Category
+    {Linear Algebra, Optimization Technique, Probability, Numerical Analysis, Mathematical Finance etc }
+
+%  \resumeSubItem{Electrical and Electronics} % Category
+%     {Advanced Control Systems, Digital Systems, Microprocessors} % Skills
+ \vspace{1.2mm}
+\hfill \textit{\footnotesize{}} \hspace{3mm}
+ \resumeHeadingSkillEnd
+
+ \vspace{-10.5mm}
+
+
+
+\section{\textbf{Achievements}}
+\vspace{0.5mm}
+\resumeSubHeadingListStart
+
+\resumeSubItem { Competitive Programming:}
+ {\textbf{ 3 (Star)} coder on \textbf{Codechef platform.}\hspace{66.0mm}\href{https://www.codechef.com/users/kartv07}{\color{blue}Profile}}
+ \vspace{1.5mm}
+
+\resumeSubItem { Geeks for Geeks}
+ {Currently secured \textbf{16th rank on GFG among 4000+} registered students of IIT Guwahati.\hspace{6.0mm}\href{https://auth.geeksforgeeks.org/user/kartvayapanthi62/practice}{\color{blue}Profile}}
+
+\vspace{1.5mm}
+\resumeSubItem { MINI MTTS }
+ {(Mathematics Training and Talent Search Programme) Got selected from MP for Mathematics Training and Talent Search Programme to attend 7 days program which was organized by (NBHM) the \textbf{National Board of Higher Mathematics} in Kurnool (2019) Andhra Pradesh.}
+\vspace{1.5mm}
+
+   \item{\hspace{1.3mm}\textbf{National Integration Camp, Agartala, Tripura 2021 :} Represent Madhya Pradesh as a leader of NSS volunteer thr-\\oughout the camp.}
+ \vspace{-0.8mm}
+
+%   \resumeSubItem { Chief Minister Medhavi Vidyarthi Yojna (2018-2021)}
+%  {Got selected for the MMVY scheme, under which all the bac-\\helor's fee was paid by the chief minister of MP.}
+ 
+
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+\section{\textbf{Positions of Responsibility}}
+\vspace{-0.4mm}
+
+\resumeSubHeadingListStart
+    \resumeProject
+      {President : National Service Scheme, Senior NSS volunteer and leader of NSS Unit}{ }
+      {July. 2018 - Apr. 2021}{\href{Links to Reports}{}}
+      \vspace{-4.0mm}
+      \resumeItemListStart
+    \item {Actively worked for the student to inculcate social welfare and provide service to society. \textbf{Lead the unit of 700+ volunteers of the institute.}}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+
+\vspace{-7.0mm}
+% \section{\textbf{Extracurricular Activities}}
+% \resumeSubHeadingListStart
+% \vspace{0.3mm}
+%   \resumeSubItem { SEMINAR }{ \textbf{Presentation on Ethereum -} A Decentralized platform of Blockchain \& how it utilises with smart contracts to facilitate DAPPS and how they are free from the control and interference of a single authority.}
+%   \vspace{0.4mm}
+  
+% \resumePOR{Saathi Club IIT Guwahati} % Award
+%     {Selected as a mentor for the mentorship program. A certain number of mentees are ass-\\igned for the mentorship program. }{}
+% \resumeSubHeadingListEnd
+
+
+
+\hspace*{-5.0mm}\rule{1.035\textwidth}{0.1mm}
+%-------------------------------------------
+\end{document}
